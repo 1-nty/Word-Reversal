@@ -1,0 +1,19 @@
+<div>
+  <h1 id="MSG">EXAMPLE</h1>
+  <input id="field" placeholder='Enter Word Or Phrase:'>
+  <button onclick="swap()">+</button>
+  <p>Ten Seconds to Reversal</p>
+</div>
+<script>
+  function switchMSG(){
+    document.getElementById('MSG').innerHTML = document.getElementById('field').value
+  }
+  function swap(){
+    var el = document.getElementById('field').value
+    reversed = [].slice.call(el).reverse().join("");
+    document.getElementById('MSG').innerHTML = reversed
+  }
+  
+  
+  setTimeout(function() {console.log('it');swap()}, 10000);
+</script>
